@@ -8,6 +8,12 @@ Open Brewery DB is a free dataset and API with public information.
 
 API Example to get all breweries: [get] https://api.openbrewerydb.org/breweries
 
+## Required Dependencies
+
+- React ^17.xx
+- React MUI ^5.xx [Material UI](https://mui.com/)
+- React testing library ^11.xx
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -35,7 +41,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Create React App documentation
+## Create React App (CRA) documentation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
