@@ -38,7 +38,13 @@ function App() {
               }
               options={breweryTypes}
               handleChange={(event) => {
-                setActiveBreweryFilter({ by_type: event.target.value });
+                if (event.target.value === "all") {
+                  setActiveBreweryFilter(null);
+                  return;
+                }
+                setActiveBreweryFilter({
+                  by_type: event.target.value,
+                });
               }}
             />
           )}
