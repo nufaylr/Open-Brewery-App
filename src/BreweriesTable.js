@@ -29,7 +29,9 @@ const BreweriesTable = ({ tableData }) => {
               </TableCell>
               <TableCell align="center">{row.brewery_type}</TableCell>
               <TableCell align="center">{row.country}</TableCell>
-              <TableCell align="center">{`${row.street ? row.street : ""} ${row.city}`}</TableCell>
+              <TableCell align="center">{`${row.street ? row.street : ""} ${
+                row.city
+              }`}</TableCell>
             </TableRow>
           ))}
         </TableBody>
