@@ -40,6 +40,22 @@ describe("useBreweries", () => {
     expect(result.current.breweryCollection.length).toBe(2);
   });
 
+  test("breweries filters to be All", async () => {
+    const fetchMock = jest.spyOn(global, "fetch").mockResolvedValue({
+      json: jest.fn().mockResolvedValue(MOCK_BREWERIES_RESPONSE),
+    });
+    const { result, waitForNextUpdate } = renderHook(() => useBreweries());
+    await waitForNextUpdate();
+    act(() => {
+      result.current.setActiveBreweryFilter(null); // filter by all
+    });
+    expect(fetchMock).toHaveBeenCalledWith(
+      "https://api.openbrewerydb.org/breweries"
+    );
+    await waitForNextUpdate();
+    expect(result.current.breweryCollection.length).toBe(3);
+  });
+
   test("catch breweries API errors", async () => {
     const fetchMock = jest.spyOn(global, "fetch").mockResolvedValue({
       json: jest.fn().mockResolvedValue(MOCK_BREWERIES_ERROR_RESPONSE),
@@ -58,4 +74,5 @@ describe("useBreweries", () => {
   afterEach(() => {
     jest.restoreAllMocks();
   });
+  afterAll(cleanup);
 });
