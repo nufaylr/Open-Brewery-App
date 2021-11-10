@@ -1,12 +1,12 @@
 # Open Brewery App
-Open Brewery App lists information on breweries, cideries, brewpubs, and bottleshops.
+Open Brewery App lists information on breweries (cideries, brewpubs, and bottleshops)
 
 ## AIP documentation
-Open Brewery DB is a free dataset and API with public information on breweries, cideries, brewpubs, and bottleshops.
+Open Brewery DB is a free dataset and API with public information.
 
-https://www.openbrewerydb.org/documentation/01-listbreweries
+[API Doc](https://www.openbrewerydb.org/documentation/01-listbreweries)
 
-Example : [get] https://api.openbrewerydb.org/breweries
+API Example to get all breweries: [get] https://api.openbrewerydb.org/breweries
 
 ## Available Scripts
 
